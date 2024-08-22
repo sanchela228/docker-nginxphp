@@ -18,4 +18,4 @@ CMD ["crond", "-f"]
 
 > Ну было и было, сидим пердим
 
-![](https://itstruct.ru/monkey.gif)
+<img src="https://itstruct.ru/monkey.gif" alt="description" style="width: 100%;">
