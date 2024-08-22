@@ -1,21 +1,22 @@
 # docker-nginxphp
 
-Просто Nginx + php8.3
+## Laravel
 
-Так же отдельно здесь добавлено phpmyadmin на 8080 порт 
-и крон. 
-Для настройки крон заданий идем в `/docker/server/crontabs/root`
+В этой ветке уже сервер с laravel+vue так же для установки здесь есть композер,
+но так как у нас папка vendor будет пустая вам самим нужно будет своими ручками маленькими установить это все дело через композер.
 
+Подключайтесь к php контейнеру exec и там команду чтобы попасть в корень проекта
 
-Изначально `/etc/crontabs/root` не выполняется в nginx:alpine, поэтому я запускаю это отдельным контейнером и в докер файле уже запускаю крон
-```Dockerfile
-RUN crontab /etc/crontabs/root
-CMD ["crond", "-f"]
+```php
+cd /var/www/html/
+```
+Установить всю фигню
+```php
+php composer.phar install
 ```
 
-Сама рабочая область проекта находится в `/www/`
+Ну а если laravel11 уже стал стар для вас, то можете удалить просто и сделать `create-project`. Только композер не удалите
 
+> Ну а хули, я че знать должен
 
-> Ну было и было, сидим пердим
-
-<img src="https://itstruct.ru/monkey.gif" alt="description" style="width: 100%;">
+<img src="https://itstruct.ru/monkey_thinking.gif" alt="description" style="width: 100%;">
