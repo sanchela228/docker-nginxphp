@@ -10,7 +10,7 @@ cd /var/www/html/
 ```
 Установить всю фигню
 ```php
-php composer.phar install
+php composer.phar install --working-dir=src
 ```
 
 Ну а если laravel11 уже стал стар для вас, то можете удалить просто и сделать `create-project`. Только композер не удалите
