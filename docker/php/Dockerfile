@@ -7,4 +7,6 @@ RUN apt-get update \
         curl \
         zip
 
+RUN chmod -R 777 /var/www/html/
+
 CMD ["php-fpm"]
