@@ -2,7 +2,7 @@
 
 Просто Nginx + php8.3
 
-# Cron
+## Cron
 Так же отдельно здесь добавлено phpmyadmin на 8080 порт
 и крон.
 Для настройки крон заданий идем в `/docker/server/crontabs/root`
@@ -15,7 +15,7 @@ CMD ["crond", "-f"]
 
 Сама рабочая область проекта находится в `/www/`
 
-# Xdebug
+## Xdebug
 Так же здесь есть дебаг. 
 Для phpStorm нужно будет добавить хост сервер в `Settings/PHP/Servers`.
 Host:localhost
