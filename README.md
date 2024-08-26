@@ -17,6 +17,9 @@ CMD ["crond", "-f"]
 
 ## Xdebug
 Так же здесь есть дебаг. 
+
+Настройки xdebug в `/docker/php/xdebug.ini`
+
 Для phpStorm нужно будет добавить хост сервер в `Settings/PHP/Servers`.
 Host:localhost
 Так же укажите маппинг для папки www - /var/www/html
