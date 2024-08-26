@@ -33,6 +33,10 @@ services:
         volumes:
             - ./www:/var/www/html
             - ./docker/php/php.ini:/usr/local/etc/php/conf.d/docker-fpm.ini
+            - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+        extra_hosts:
+            -   "host.docker.internal:host-gateway"
 
         networks:
             - network2
