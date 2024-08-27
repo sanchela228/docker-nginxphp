@@ -7,6 +7,10 @@ RUN apt-get update \
         curl \
         zip
 
+
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
+
 RUN chmod -R 777 /var/www/html/
 
 CMD ["php-fpm"]
