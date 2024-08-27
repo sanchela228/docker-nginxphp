@@ -8,6 +8,12 @@ RUN apt-get update \
         zip
 
 
+# database
+RUN docker-php-ext-install -j$(nproc) \
+	mysqli \
+	pdo \
+	pdo_mysql
+
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 

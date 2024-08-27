@@ -11,9 +11,11 @@ cd /var/www/html/
 Установить всю фигню
 ```php
 php composer.phar install --working-dir=src
+php src/artisan key:generate
+php src/artisan migrate
 ```
 
-Ну а если laravel11 уже стал стар для вас, то можете удалить просто и сделать `create-project`. Только композер не удалите
+Если при установке ошибка, возможно стоит отключить дебаг в IDE, во время выполнения установки
 
 ## Xdebug
 Так же здесь есть дебаг.
